@@ -1,0 +1,8 @@
+# pixi environments
+.pixi
+*.egg-info
+data
+neon_dataset.zip
+.Rproj.user
+datasets
+renv

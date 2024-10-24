@@ -1,0 +1,50 @@
+[project]
+authors = ["Simone Massaro <simone.massaro@mone27.net>"]
+channels = ["nvidia/label/cuda-12.4.0", "nvidia", "conda-forge", "pytorch"]
+description = "Add a short description here"
+name = "ForestAIDetection"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+check_cuda = "python -c \"import torch; print('CUDA available:', torch.cuda.is_available())\""
+
+[dependencies]
+cuda = {channel = "nvidia/label/cuda-12.4.0"}
+pytorch-cuda = {channel = "pytorch", version = "12.4"}
+pytorch = {channel = "pytorch", version = ">=2.4.1,<3"}
+torchvision = {channel = "pytorch"}
+# numpy = ">=2.1.1,<3"
+jupyterlab = ">=4.2.5,<5"
+ipywidgets = ">=8.1.5,<9"
+# python="3.12"
+onnx = "*"
+ffmpeg = {channel = "conda-forge"}
+ultralytics = ">=8.3.5,<9"
+pyprojroot = ">=0.3.0,<0.4"
+fastcore = ">=1.7.11,<2"
+# opencv = "4.10.*"
+
+[pypi-dependencies]
+pylabel = ">=0.1.55, <0.2"
+# ultralytics = ">=8.3.5, <9"
+# pylabel = ">=0.1.55, <0.2"
+# numpy = "*"
+# torchvision = {channel="pytorch"}
+# numpy = ">=2.1.1,<3"
+# udunits2 = ">=2.2.28,<3"
+# r-lidr = ">=4.1.2,<5"
+# r-tidyverse = ">=2.0.0,<3"
+# r-devtools = ">=2.4.5,<3"
+# r-codetools = ">=0.2_20,<0.3"
+# jupyter = ">=1.1.1,<2"
+# fastdownload = ">=0.0.7,<0.0.8"
+# ipython = ">=8.28.0,<9"
+# matplotlib = ">=3.9.2,<4"
+# pyprojroot = ">=0.3.0,<0.4"
+# python = "3.11"
+# typing_extensions = {channel="conda-forge", version = ">=4.12"}
+# r-cluster = ">=2.1.6,<3"
+# r-clue = ">=0.3_65,<0.4"
+# r-languageserver = ">=0.3.16,<0.4"
+# r-jsonlite = ">=1.8.9,<2"
